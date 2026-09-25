@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack Pro | Gym Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header>
+            <h1>🏋️‍♂️ FitTrack Pro</h1>
+            <p>Track your workouts, see your progress, and stay consistent.</p>
+        </header>
+
+        <!-- Stats Overview Cards -->
+        <section class="stats-grid">
+            <div class="card">
+                <h3>Total Workouts</h3>
+                <p id="total-count">0</p>
+            </div>
+            <div class="card">
+                <h3>Total Weight Lifted</h3>
+                <p id="total-weight">0 kg</p>
+            </div>
+        </section>
+
+        <!-- Main Layout: Form on left, History on right -->
+        <main class="main-content">
+            
+            <!-- Workout Input Form -->
+            <section class="form-section">
+                <h2>Log New Workout</h2>
+                <form id="workout-form">
+                    <div class="form-group">
+                        <label for="exercise">Exercise Name</label>
+                        <input type="text" id="exercise" placeholder="e.g., Bench Press, Squats" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" min="0" placeholder="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reps">Reps</label>
+                            <input type="number" id="reps" min="0" placeholder="0" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Add Workout</button>
+                </form>
+            </section>
+
+            <!-- Workout Log History Table -->
+            <section class="history-section">
+                <h2>Workout History</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Weight</th>
+                                <th>Reps</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="workout-list">
+                            <!-- JavaScript will insert rows here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
