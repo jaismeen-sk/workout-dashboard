@@ -2,8 +2,10 @@
 :root {
     --bg-color: #f4f7f6;
     --card-bg: #ffffff;
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
+    --primary: #b417b2;
+    --primary-hover:#b417b2;
+
+    /* --primary-hover: #1d4ed8; */
     --text-main: #1e293b;
     --text-muted: #64748b;
     --danger: #ef4444;
